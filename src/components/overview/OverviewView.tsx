@@ -40,7 +40,7 @@ export default function OverviewView() {
 
         <div className="ov-section-label">Core brand statement</div>
         <div className="card accent" style={{ marginBottom: 48, padding: '28px 32px' }}>
-          <div className="card-body" style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 20, fontWeight: 700, color: '#1D3A2A', lineHeight: 1.35 }}>
+          <div className="card-body" style={{ fontFamily: "'Outfit', sans-serif", fontSize: 20, fontWeight: 700, color: 'var(--text)', lineHeight: 1.35 }}>
             &ldquo;Boost33 gives local business owners a fully built growth system — free to start, and paid only when it works.&rdquo;
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function OverviewView() {
           </svg>
           This document is private and prepared exclusively for Boost33 by Onepct. Do not share or distribute.
         </div>
-        <span style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 11, color: '#86868b', opacity: 0.45 }}>Onepct · May 2026</span>
+        <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: 11, color: '#86868b', opacity: 0.45 }}>Onepct · May 2026</span>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ export default function ContentStrategy({ sectionId, commentCount, onOpenComment
 
       <div className={`cb hero${acceptances['content-rule'] ? ' block-accepted' : ''}`} style={{ marginBottom: 16 }}>
         <div className="cb-label">The rule</div>
-        <div className="cb-body" style={{ fontSize: 15, color: '#1D3A2A', fontWeight: 500, lineHeight: 1.6 }}>Every piece of content — every post, video, email, article — maps to one of the five pillars below. Content that doesn&apos;t fit isn&apos;t produced. Pillars build topical authority over time; spreading thin across unrelated topics destroys it.</div>
+        <div className="cb-body" style={{ fontSize: 15, color: 'var(--text)', fontWeight: 500, lineHeight: 1.6 }}>Every piece of content — every post, video, email, article — maps to one of the five pillars below. Content that doesn&apos;t fit isn&apos;t produced. Pillars build topical authority over time; spreading thin across unrelated topics destroys it.</div>
         <BlockActions blockId="content-rule" sectionId={sectionId} accepted={acceptances['content-rule'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 

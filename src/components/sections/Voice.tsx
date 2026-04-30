@@ -30,27 +30,27 @@ export default function Voice({ sectionId, commentCount, onOpenComments, accepta
         <div className={`cb${acceptances['voice-p1'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 1</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Ambitious — fighter energy</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Ambitious — fighter energy</p>
             <p>Not motivational-poster ambitious. The 8 Mile kind — built from the ground up, working toward a defining moment. Doesn&apos;t perform confidence. Earns it through delivery.</p>
-            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;We&apos;re not the first choice. We&apos;re not on stage. But we are the hard workers.&rdquo;</p>
+            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--accent)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;We&apos;re not the first choice. We&apos;re not on stage. But we are the hard workers.&rdquo;</p>
           </div>
           <BlockActions blockId="voice-p1" sectionId={sectionId} accepted={acceptances['voice-p1'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
         <div className={`cb${acceptances['voice-p2'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 2</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Generous and direct</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Generous and direct</p>
             <p>Gives first, asks second. Leads with value and proof before asking for anything. Says exactly what it means — no corporate hedging, no weasel words that dilute the point.</p>
-            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;You don&apos;t have to pay. You just set up the business, and when you&apos;re ready, the deal is already there.&rdquo;</p>
+            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--accent)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;You don&apos;t have to pay. You just set up the business, and when you&apos;re ready, the deal is already there.&rdquo;</p>
           </div>
           <BlockActions blockId="voice-p2" sectionId={sectionId} accepted={acceptances['voice-p2'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
         <div className={`cb${acceptances['voice-p3'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 3</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Confident, not arrogant</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Confident, not arrogant</p>
             <p>Confidence earned through delivery, not projected through ego. Boost33 doesn&apos;t need to put others down — results do the talking. The confidence is quiet and real.</p>
-            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;Bring results first. Show me the beef. And then I will consider you.&rdquo;</p>
+            <p style={{ marginTop: 10, fontSize: 12, color: 'var(--accent)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;Bring results first. Show me the beef. And then I will consider you.&rdquo;</p>
           </div>
           <BlockActions blockId="voice-p3" sectionId={sectionId} accepted={acceptances['voice-p3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>

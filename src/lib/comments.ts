@@ -1,23 +1,14 @@
+import { Redis } from '@upstash/redis';
 import { Comment } from '@/types';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type KVClient = { get: (key: string) => Promise<any>; set: (key: string, value: unknown) => Promise<void> };
-
-function getKV(): KVClient | null {
-  // lazy import so missing env vars don't crash at build time
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    return require('@vercel/kv').kv as KVClient;
-  } catch {
-    return null;
-  }
-}
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
+});
 
 export async function getAllComments(): Promise<Comment[]> {
   try {
-    const kv = getKV();
-    if (!kv) return [];
-    const data = await kv.get('comments') as Comment[] | null;
+    const data = await redis.get<Comment[]>('comments');
     return data ?? [];
   } catch {
     return [];
@@ -31,20 +22,16 @@ export async function getCommentsBySection(section_id: string): Promise<Comment[
 
 export async function addComment(comment: Comment): Promise<void> {
   try {
-    const kv = getKV();
-    if (!kv) return;
     const all = await getAllComments();
     all.push(comment);
-    await kv.set('comments', all);
+    await redis.set('comments', all);
   } catch {}
 }
 
 export async function resolveComment(id: string): Promise<void> {
   try {
-    const kv = getKV();
-    if (!kv) return;
     const all = await getAllComments();
     const updated = all.map(c => c.id === id ? { ...c, status: 'resolved' as const } : c);
-    await kv.set('comments', updated);
+    await redis.set('comments', updated);
   } catch {}
 }

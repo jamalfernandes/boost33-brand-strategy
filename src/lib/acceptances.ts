@@ -1,22 +1,23 @@
-function getKV() {
-  try { return require('@vercel/kv').kv; } catch { return null; }
-}
+import { Redis } from '@upstash/redis';
+
+const redis = new Redis({
+  url: process.env.KV_REST_API_URL!,
+  token: process.env.KV_REST_API_TOKEN!,
+});
 
 export async function getAllAcceptances(): Promise<Record<string, boolean>> {
   try {
-    const kv = getKV();
-    if (!kv) return {};
-    const data = await kv.get('acceptances');
-    return (data as Record<string, boolean>) ?? {};
-  } catch { return {}; }
+    const data = await redis.get<Record<string, boolean>>('acceptances');
+    return data ?? {};
+  } catch {
+    return {};
+  }
 }
 
 export async function setAcceptance(blockId: string, accepted: boolean): Promise<void> {
   try {
-    const kv = getKV();
-    if (!kv) return;
     const all = await getAllAcceptances();
     all[blockId] = accepted;
-    await kv.set('acceptances', all);
+    await redis.set('acceptances', all);
   } catch {}
 }

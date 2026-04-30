@@ -125,7 +125,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
         <div className={`cb${acceptances['pos-diff-1'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Differentiator 1</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Prove-it-first model</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Prove-it-first model</p>
             <p>Full branded system built and deployed at zero cost. Payment only activates after real, measurable results during the trial. No upfront financial commitment — ever.</p>
           </div>
           <BlockActions blockId="pos-diff-1" sectionId={sectionId} accepted={acceptances['pos-diff-1'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
@@ -133,7 +133,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
         <div className={`cb${acceptances['pos-diff-2'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Differentiator 2</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>79+ integrated tools in one stack</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>79+ integrated tools in one stack</p>
             <p>CRM, review management, lead capture, automations — built, integrated, and operated. No piecing together disconnected apps. One system, not twelve subscriptions.</p>
           </div>
           <BlockActions blockId="pos-diff-2" sectionId={sectionId} accepted={acceptances['pos-diff-2'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
@@ -141,7 +141,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
         <div className={`cb${acceptances['pos-diff-3'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Differentiator 3</div>
           <div className="cb-body">
-            <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Proprietary data layer</p>
+            <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Proprietary data layer</p>
             <p>As AI commoditises individual tools, client data becomes the real moat. Boost33 builds that asset from day one — owned by the client, not by a platform that can switch off when a subscription lapses.</p>
           </div>
           <BlockActions blockId="pos-diff-3" sectionId={sectionId} accepted={acceptances['pos-diff-3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />

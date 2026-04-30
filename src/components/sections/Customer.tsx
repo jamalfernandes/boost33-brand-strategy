@@ -88,8 +88,8 @@ export default function Customer({ sectionId, commentCount, onOpenComments, acce
       </div>
 
       <div className="two-col">
-        <div className={`cb${acceptances['cus-good-fit'] ? ' block-accepted' : ''}`} style={{ borderColor: 'var(--green-border)' }}>
-          <div className="cb-label" style={{ color: 'var(--green)' }}>Good fit — primary ICP</div>
+        <div className={`cb${acceptances['cus-good-fit'] ? ' block-accepted' : ''}`} style={{ borderColor: 'var(--accent-border)' }}>
+          <div className="cb-label" style={{ color: 'var(--accent)' }}>Good fit — primary ICP</div>
           <div className="cb-body">
             <p>Any local, owner-operated service business: bakeries, hairdressers, plumbers, restaurants, physiotherapists, cleaners. Revenue €1K–€1M. Owner makes all decisions. Serves local customers in person.</p>
             <p>No industry restrictions at this stage — research will identify which verticals to prioritise first, but no category is excluded from the ICP.</p>
