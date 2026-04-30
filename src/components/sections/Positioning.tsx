@@ -15,7 +15,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
     <div className="page-inner">
       <div className="page-eyebrow">Section 1 of 7</div>
       <h2 className="page-title">Your positioning</h2>
-      <p className="page-sub">The market category Boost33 owns, the structured positioning statement, and how it compares to every alternative a local business owner has tried before.</p>
+      <p className="page-sub">The market category Boost33 owns, the positioning statement, and how it stacks up against every alternative a local business owner has already tried.</p>
       <div className="page-divider" />
 
       <button
@@ -34,10 +34,10 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
 
       <div className="two-col" style={{ marginBottom: 14 }}>
         <div className={`cb${acceptances['pos-why'] ? ' block-accepted' : ''}`}>
-          <div className="cb-label">Why &ldquo;growth system&rdquo; — not agency, app, or platform</div>
+          <div className="cb-label">Why &ldquo;growth system&rdquo; and not agency, app, or platform</div>
           <div className="cb-body">
-            <p>Every local business owner already knows what an agency is — and most have been disappointed by one. &ldquo;Platform&rdquo; sounds like software to manage. &ldquo;App&rdquo; sounds like another thing to learn.</p>
-            <p><strong>System</strong> is the word they&apos;ve been missing: not another tool, not another service, but a complete, integrated way of growing — built for them, not by them.</p>
+            <p>Every local business owner knows what an agency is, and most have been disappointed by one. &ldquo;Platform&rdquo; sounds like software to manage. &ldquo;App&rdquo; sounds like another thing to learn.</p>
+            <p><strong>System</strong> is the word they&apos;ve been missing: not another tool or service, but a complete way of growing. Built for them, not by them.</p>
           </div>
           <BlockActions blockId="pos-why" sectionId={sectionId} accepted={acceptances['pos-why'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
@@ -126,7 +126,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
           <div className="cb-label">Differentiator 1</div>
           <div className="cb-body">
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Prove-it-first model</p>
-            <p>Full branded system built and deployed at zero cost. Payment only activates after real, measurable results during the trial. No upfront financial commitment — ever.</p>
+            <p>Full branded system built and deployed at zero cost. Payment only activates after real, measurable results during the trial. No upfront commitment, ever.</p>
           </div>
           <BlockActions blockId="pos-diff-1" sectionId={sectionId} accepted={acceptances['pos-diff-1'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
@@ -134,7 +134,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
           <div className="cb-label">Differentiator 2</div>
           <div className="cb-body">
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>79+ integrated tools in one stack</p>
-            <p>CRM, review management, lead capture, automations — built, integrated, and operated. No piecing together disconnected apps. One system, not twelve subscriptions.</p>
+            <p>CRM, review management, lead capture, automations. All built, integrated, and operated. No piecing together disconnected apps. One system, not twelve subscriptions.</p>
           </div>
           <BlockActions blockId="pos-diff-2" sectionId={sectionId} accepted={acceptances['pos-diff-2'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
@@ -142,7 +142,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
           <div className="cb-label">Differentiator 3</div>
           <div className="cb-body">
             <p style={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 14, color: 'var(--text)', marginBottom: 8 }}>Proprietary data layer</p>
-            <p>As AI commoditises individual tools, client data becomes the real moat. Boost33 builds that asset from day one — owned by the client, not by a platform that can switch off when a subscription lapses.</p>
+            <p>As AI commoditises individual tools, client data becomes the real moat. Boost33 builds that asset from day one, owned by the client. Not by a platform that disappears when a subscription lapses.</p>
           </div>
           <BlockActions blockId="pos-diff-3" sectionId={sectionId} accepted={acceptances['pos-diff-3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>

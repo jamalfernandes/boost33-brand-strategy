@@ -50,12 +50,12 @@ export default function Customer({ sectionId, commentCount, onOpenComments, acce
         </div>
         <div className={`cb${acceptances['cus-missing'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">What&apos;s missing</div>
-          <div className="cb-body">No system to reliably generate new customers. No way to capture leads before they walk out. No follow-up after service. No review strategy. Nothing compounds — only manual effort, and it stops when they do.</div>
+          <div className="cb-body">No system to reliably generate new customers. No way to capture leads before they walk out. No follow-up after service. No review strategy. Nothing compounds. Only manual effort, and it stops when they do.</div>
           <BlockActions blockId="cus-missing" sectionId={sectionId} accepted={acceptances['cus-missing'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
         <div className={`cb${acceptances['cus-frustration'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Their frustration</div>
-          <div className="cb-body">Most have paid an agency or freelancer — got activity (posts, reports, calls) but no new customers. Now risk-averse but know something has to change. Looking for proof before any commitment.</div>
+          <div className="cb-body">Most have paid an agency or freelancer. They got activity (posts, reports, calls) but no new customers. Still know something has to change, but they need proof before they trust anyone again.</div>
           <BlockActions blockId="cus-frustration" sectionId={sectionId} accepted={acceptances['cus-frustration'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
@@ -92,14 +92,14 @@ export default function Customer({ sectionId, commentCount, onOpenComments, acce
           <div className="cb-label" style={{ color: 'var(--accent)' }}>Good fit — primary ICP</div>
           <div className="cb-body">
             <p>Any local, owner-operated service business: bakeries, hairdressers, plumbers, restaurants, physiotherapists, cleaners. Revenue €1K–€1M. Owner makes all decisions. Serves local customers in person.</p>
-            <p>No industry restrictions at this stage — research will identify which verticals to prioritise first, but no category is excluded from the ICP.</p>
+            <p>No industry restrictions at this stage. Research will identify which verticals to prioritise first, but no category is excluded from the ICP.</p>
           </div>
           <BlockActions blockId="cus-good-fit" sectionId={sectionId} accepted={acceptances['cus-good-fit'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
         <div className={`cb${acceptances['cus-not-fit'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Not a fit — for the SaaS product</div>
           <div className="cb-body">
-            <p>Large B2B IT companies, innovation firms, and national service businesses — these belong to the Elite/Premium consulting segment and are served separately via LinkedIn and high-touch relationship management.</p>
+            <p>Large B2B IT companies, innovation firms, and national service businesses belong to the Elite/Premium consulting segment and are served separately via LinkedIn and high-touch relationship management.</p>
             <p>E-commerce and digitally native businesses don&apos;t need a from-scratch local growth system. Different product, different conversation.</p>
           </div>
           <BlockActions blockId="cus-not-fit" sectionId={sectionId} accepted={acceptances['cus-not-fit'] || false} onAccept={onAccept} onSuggest={onOpenComments} />

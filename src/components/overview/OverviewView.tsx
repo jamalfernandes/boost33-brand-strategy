@@ -6,7 +6,7 @@ export default function OverviewView() {
       <div className="ov-hero">
         <div className="ov-hero-eyebrow">Brand Strategy · Prepared by Onepct</div>
         <div className="ov-hero-statement">
-          Boost33 is a <em>local business growth system</em> — fully built for you, free to start, and paid only when it works.
+          Boost33 is a <em>local business growth system</em>. Fully built for you, free to start, and paid only when it works.
         </div>
         <div className="ov-hero-meta">
           <span>May 2026</span>
@@ -24,24 +24,24 @@ export default function OverviewView() {
           <div className="card accent">
             <div className="card-label">What Boost33 is</div>
             <div className="card-title">Local Business Growth System</div>
-            <div className="card-body">A pre-built, fully integrated growth stack deployed free for local service businesses. Payment is only triggered after real results — leads, reviews, revenue — are delivered. The business model is the differentiator.</div>
+            <div className="card-body">A pre-built, fully integrated growth stack deployed free for local service businesses. Payment is only triggered after real results: leads, reviews, revenue. The business model is the differentiator.</div>
           </div>
           <div className="card">
             <div className="card-label">Who it&apos;s for</div>
             <div className="card-title">Owner-Operated Local Businesses</div>
-            <div className="card-body">Bakeries, hairdressers, plumbers, restaurants — any local service business with €1K–1M annual revenue where the owner makes every decision. Global reach, no geographic restrictions.</div>
+            <div className="card-body">Bakeries, hairdressers, plumbers, restaurants. Any local service business with €1K–1M annual revenue where the owner makes every decision. Global reach, no geographic restrictions.</div>
           </div>
           <div className="card">
             <div className="card-label">The core offer</div>
             <div className="card-title">Prove It First. Pay After.</div>
-            <div className="card-body">79+ integrated apps built, deployed, and operated by Boost33 at zero upfront cost. The trial runs until the client can see results. Then — and only then — the paid license is activated.</div>
+            <div className="card-body">79+ integrated apps built, deployed, and operated by Boost33 at zero upfront cost. The trial runs until the client can see results. Then, and only then, the paid license is activated.</div>
           </div>
         </div>
 
         <div className="ov-section-label">Core brand statement</div>
         <div className="card accent" style={{ marginBottom: 48, padding: '28px 32px' }}>
           <div className="card-body" style={{ fontFamily: "'Outfit', sans-serif", fontSize: 20, fontWeight: 700, color: 'var(--text)', lineHeight: 1.35 }}>
-            &ldquo;Boost33 gives local business owners a fully built growth system — free to start, and paid only when it works.&rdquo;
+            &ldquo;Boost33 gives local business owners a fully built growth system, free to start, and paid only when it works.&rdquo;
           </div>
         </div>
 
@@ -49,15 +49,15 @@ export default function OverviewView() {
         <div className="ov-row cols-2" style={{ marginBottom: 48 }}>
           <div className="card">
             <div className="card-label">Personality</div>
-            <div className="card-body"><strong>Ambitious.</strong> Fighter energy — built from the ground up toward a defining moment.<br /><br /><strong>Generous.</strong> Gives first. Proves before asking for anything.<br /><br /><strong>Direct.</strong> Says what it means. No hedging, no hype.</div>
+            <div className="card-body"><strong>Ambitious.</strong> Fighter energy, built from the ground up toward a defining moment.<br /><br /><strong>Generous.</strong> Gives first. Proves before asking for anything.<br /><br /><strong>Direct.</strong> Says what it means. No hedging, no hype.</div>
           </div>
           <div className="card">
             <div className="card-label">Voice</div>
-            <div className="card-body">Plain language that any business owner understands. Zero jargon. Outcomes always — more customers, more reviews, more revenue. Short declarative sentences. Confidence backed by proof, not ego.</div>
+            <div className="card-body">Plain language that any business owner understands. Zero jargon. Outcomes always: more customers, more reviews, more revenue. Short declarative sentences. Confidence backed by proof, not ego.</div>
           </div>
           <div className="card">
             <div className="card-label">Content themes</div>
-            <div className="card-body">Grow Before You Pay · Local Business Growth · The Ambitious Owner · Systems Over People · Data Is Your Asset<br /><br />Every piece of content maps to one of these five — nothing else gets produced.</div>
+            <div className="card-body">Grow Before You Pay · Local Business Growth · The Ambitious Owner · Systems Over People · Data Is Your Asset<br /><br />Every piece of content maps to one of these five. Nothing else gets produced.</div>
           </div>
           <div className="card">
             <div className="card-label">Audience</div>
@@ -74,7 +74,7 @@ export default function OverviewView() {
         </div>
         <div className="ch-row">
           <div className="ch-cell">Instagram</div>
-          <div className="ch-cell">Primary visual channel for local business owners. Existing presence — now on strategy, not ad hoc.</div>
+          <div className="ch-cell">Primary visual channel for local business owners. Existing presence, now on strategy.</div>
           <div className="ch-cell">Results posts, growth tips, founder content, trial behind-the-scenes. 3–4× per week.</div>
           <div className="ch-cell"><span className="phase-pill p1">Now</span></div>
         </div>
@@ -86,8 +86,8 @@ export default function OverviewView() {
         </div>
         <div className="ch-row">
           <div className="ch-cell">TikTok</div>
-          <div className="ch-cell">Demand creation for cold audiences — local business owners who don&apos;t know Boost33 yet. AI-assisted production.</div>
-          <div className="ch-cell">Short-form video — the prove-it-first model in 60 seconds, results stories, local growth tips.</div>
+          <div className="ch-cell">Demand creation for cold audiences who don&apos;t know Boost33 yet. AI-assisted production.</div>
+          <div className="ch-cell">Short-form video: the prove-it-first model in 60 seconds, results stories, local growth tips.</div>
           <div className="ch-cell"><span className="phase-pill p2">June/July</span></div>
         </div>
         <div className="ch-row" style={{ marginBottom: 48 }}>
