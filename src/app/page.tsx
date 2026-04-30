@@ -23,6 +23,7 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [commentSidebarOpen, setCommentSidebarOpen] = useState(false);
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
+  const [acceptances, setAcceptances] = useState<Record<string, boolean>>({});
 
   const fetchCommentCounts = useCallback(async () => {
     try {
@@ -40,9 +41,18 @@ export default function Home() {
     }
   }, []);
 
+  const fetchAcceptances = useCallback(async () => {
+    try {
+      const res = await fetch('/api/acceptances');
+      const data: Record<string, boolean> = await res.json();
+      setAcceptances(data);
+    } catch {}
+  }, []);
+
   useEffect(() => {
     fetchCommentCounts();
-  }, [fetchCommentCounts]);
+    fetchAcceptances();
+  }, [fetchCommentCounts, fetchAcceptances]);
 
   function handleViewChange(view: 'overview' | 'strategy') {
     setActiveView(view);
@@ -70,6 +80,10 @@ export default function Home() {
   const currentSectionId = SECTION_IDS[currentSection];
   const currentSectionLabel = SECTION_NAMES[currentSection];
 
+  function handleAccept(blockId: string, accepted: boolean) {
+    setAcceptances(prev => ({ ...prev, [blockId]: accepted }));
+  }
+
   const sectionProps = (idx: number) => ({
     sectionId: SECTION_IDS[idx],
     commentCount: commentCounts[SECTION_IDS[idx]] || 0,
@@ -77,6 +91,8 @@ export default function Home() {
       setCurrentSection(idx);
       setCommentSidebarOpen(true);
     },
+    acceptances,
+    onAccept: handleAccept,
   });
 
   return (

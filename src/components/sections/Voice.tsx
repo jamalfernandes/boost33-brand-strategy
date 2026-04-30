@@ -1,12 +1,16 @@
 'use client';
 
+import BlockActions from '@/components/BlockActions';
+
 interface SectionProps {
   sectionId: string;
   commentCount: number;
   onOpenComments: () => void;
+  acceptances: Record<string, boolean>;
+  onAccept: (blockId: string, accepted: boolean) => void;
 }
 
-export default function Voice({ commentCount, onOpenComments }: SectionProps) {
+export default function Voice({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
       <div className="page-eyebrow">Section 4 of 7</div>
@@ -23,33 +27,36 @@ export default function Voice({ commentCount, onOpenComments }: SectionProps) {
       </button>
 
       <div className="three-col" style={{ marginBottom: 14 }}>
-        <div className="cb">
+        <div className={`cb${acceptances['voice-p1'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 1</div>
           <div className="cb-body">
             <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Ambitious — fighter energy</p>
             <p>Not motivational-poster ambitious. The 8 Mile kind — built from the ground up, working toward a defining moment. Doesn&apos;t perform confidence. Earns it through delivery.</p>
             <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;We&apos;re not the first choice. We&apos;re not on stage. But we are the hard workers.&rdquo;</p>
           </div>
+          <BlockActions blockId="voice-p1" sectionId={sectionId} accepted={acceptances['voice-p1'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="cb">
+        <div className={`cb${acceptances['voice-p2'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 2</div>
           <div className="cb-body">
             <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Generous and direct</p>
             <p>Gives first, asks second. Leads with value and proof before asking for anything. Says exactly what it means — no corporate hedging, no weasel words that dilute the point.</p>
             <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;You don&apos;t have to pay. You just set up the business, and when you&apos;re ready, the deal is already there.&rdquo;</p>
           </div>
+          <BlockActions blockId="voice-p2" sectionId={sectionId} accepted={acceptances['voice-p2'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="cb">
+        <div className={`cb${acceptances['voice-p3'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Personality 3</div>
           <div className="cb-body">
             <p style={{ fontFamily: '\'Plus Jakarta Sans\', sans-serif', fontSize: 15, fontWeight: 800, color: 'var(--text)', marginBottom: 8 }}>Confident, not arrogant</p>
             <p>Confidence earned through delivery, not projected through ego. Boost33 doesn&apos;t need to put others down — results do the talking. The confidence is quiet and real.</p>
             <p style={{ marginTop: 10, fontSize: 12, color: 'var(--green)', fontWeight: 600, fontStyle: 'italic' }}>&ldquo;Bring results first. Show me the beef. And then I will consider you.&rdquo;</p>
           </div>
+          <BlockActions blockId="voice-p3" sectionId={sectionId} accepted={acceptances['voice-p3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
 
-      <div className="cb" style={{ marginBottom: 14 }}>
+      <div className={`cb${acceptances['voice-tone'] ? ' block-accepted' : ''}`} style={{ marginBottom: 14 }}>
         <div className="cb-label">Tone — where Boost33 sits on each axis</div>
         <div style={{ padding: '4px 0' }}>
           <div className="voice-row"><span className="v-lbl">Formal</span><div className="v-track"><div className="v-dot" style={{ left: '62%' }} /></div><span className="v-lbl r">Casual</span></div>
@@ -57,6 +64,7 @@ export default function Voice({ commentCount, onOpenComments }: SectionProps) {
           <div className="voice-row"><span className="v-lbl">Technical</span><div className="v-track"><div className="v-dot" style={{ left: '72%' }} /></div><span className="v-lbl r">Accessible</span></div>
           <div className="voice-row"><span className="v-lbl">Serious</span><div className="v-track"><div className="v-dot" style={{ left: '30%' }} /></div><span className="v-lbl r">Playful</span></div>
         </div>
+        <BlockActions blockId="voice-tone" sectionId={sectionId} accepted={acceptances['voice-tone'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label">In practice — what the voice looks like on social</div>
@@ -91,6 +99,9 @@ export default function Voice({ commentCount, onOpenComments }: SectionProps) {
             <span style={{ fontSize: 11, color: '#ccc' }}>[unsubstantiated claims · jargon · hype · emoji overload]</span>
           </div>
         </div>
+      </div>
+      <div className="block-actions-row">
+        <BlockActions blockId="voice-examples" sectionId={sectionId} accepted={acceptances['voice-examples'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label" style={{ marginTop: 4 }}>Founder voice — direct quotes from discovery</div>

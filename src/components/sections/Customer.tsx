@@ -1,12 +1,16 @@
 'use client';
 
+import BlockActions from '@/components/BlockActions';
+
 interface SectionProps {
   sectionId: string;
   commentCount: number;
   onOpenComments: () => void;
+  acceptances: Record<string, boolean>;
+  onAccept: (blockId: string, accepted: boolean) => void;
 }
 
-export default function Customer({ commentCount, onOpenComments }: SectionProps) {
+export default function Customer({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
       <div className="page-eyebrow">Section 2 of 7</div>
@@ -22,7 +26,7 @@ export default function Customer({ commentCount, onOpenComments }: SectionProps)
         Comments
       </button>
 
-      <div className="persona-hd">
+      <div className={`persona-hd${acceptances['cus-persona'] ? ' block-accepted' : ''}`}>
         <div className="persona-name">The Ambitious Owner-Operator</div>
         <div className="persona-role">Primary customer — local service business, globally</div>
         <div className="persona-chips">
@@ -34,21 +38,25 @@ export default function Customer({ commentCount, onOpenComments }: SectionProps)
           <div className="p-chip"><strong>Industry:</strong> No restrictions</div>
         </div>
         <div className="persona-quote">&ldquo;Something needs to change — but I&apos;m not paying someone else to figure it out again.&rdquo;</div>
+        <BlockActions blockId="cus-persona" sectionId={sectionId} accepted={acceptances['cus-persona'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label">Their reality today</div>
       <div className="three-col" style={{ marginBottom: 14 }}>
-        <div className="cb">
+        <div className={`cb${acceptances['cus-tools'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">What they have</div>
           <div className="cb-body">WhatsApp for customer messages. A Google Business Profile (often unclaimed). A basic website. Occasional Instagram posts with no strategy. Rarely: any CRM, email list, review system, or lead capture.</div>
+          <BlockActions blockId="cus-tools" sectionId={sectionId} accepted={acceptances['cus-tools'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="cb">
+        <div className={`cb${acceptances['cus-missing'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">What&apos;s missing</div>
           <div className="cb-body">No system to reliably generate new customers. No way to capture leads before they walk out. No follow-up after service. No review strategy. Nothing compounds — only manual effort, and it stops when they do.</div>
+          <BlockActions blockId="cus-missing" sectionId={sectionId} accepted={acceptances['cus-missing'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="cb">
+        <div className={`cb${acceptances['cus-frustration'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Their frustration</div>
           <div className="cb-body">Most have paid an agency or freelancer — got activity (posts, reports, calls) but no new customers. Now risk-averse but know something has to change. Looking for proof before any commitment.</div>
+          <BlockActions blockId="cus-frustration" sectionId={sectionId} accepted={acceptances['cus-frustration'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
 
@@ -75,21 +83,26 @@ export default function Customer({ commentCount, onOpenComments }: SectionProps)
           <div className="step-d">Another owner tells them about results they&apos;ve seen. Arrives pre-sold. The model to actively build toward.</div>
         </div>
       </div>
+      <div className="block-actions-row">
+        <BlockActions blockId="cus-triggers" sectionId={sectionId} accepted={acceptances['cus-triggers'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
+      </div>
 
       <div className="two-col">
-        <div className="cb" style={{ borderColor: 'var(--green-border)' }}>
+        <div className={`cb${acceptances['cus-good-fit'] ? ' block-accepted' : ''}`} style={{ borderColor: 'var(--green-border)' }}>
           <div className="cb-label" style={{ color: 'var(--green)' }}>Good fit — primary ICP</div>
           <div className="cb-body">
             <p>Any local, owner-operated service business: bakeries, hairdressers, plumbers, restaurants, physiotherapists, cleaners. Revenue €1K–€1M. Owner makes all decisions. Serves local customers in person.</p>
             <p>No industry restrictions at this stage — research will identify which verticals to prioritise first, but no category is excluded from the ICP.</p>
           </div>
+          <BlockActions blockId="cus-good-fit" sectionId={sectionId} accepted={acceptances['cus-good-fit'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="cb">
+        <div className={`cb${acceptances['cus-not-fit'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">Not a fit — for the SaaS product</div>
           <div className="cb-body">
             <p>Large B2B IT companies, innovation firms, and national service businesses — these belong to the Elite/Premium consulting segment and are served separately via LinkedIn and high-touch relationship management.</p>
             <p>E-commerce and digitally native businesses don&apos;t need a from-scratch local growth system. Different product, different conversation.</p>
           </div>
+          <BlockActions blockId="cus-not-fit" sectionId={sectionId} accepted={acceptances['cus-not-fit'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
     </div>

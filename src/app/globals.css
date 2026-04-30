@@ -596,3 +596,37 @@ body {
   .strat-main.sidebar-open { padding-right: 0; }
   .comment-btn { position: static; margin-top: 12px; }
 }
+
+/* ── BLOCK ACTIONS ── */
+.block-actions {
+  display: flex; gap: 6px;
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.ba-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px; font-weight: 700;
+  padding: 5px 12px; border-radius: 6px;
+  cursor: pointer; transition: all 0.13s;
+  display: flex; align-items: center; gap: 5px;
+  border: 1.5px solid var(--border);
+}
+.ba-btn.ba-accept { background: var(--surface); color: var(--text-muted); }
+.ba-btn.ba-accept:hover:not(:disabled) { border-color: var(--green); color: var(--green); background: var(--green-light); }
+.ba-btn.ba-accept.accepted { background: var(--green-light); border-color: var(--green-border); color: var(--green); }
+.ba-btn.ba-suggest { background: transparent; color: var(--text-muted); }
+.ba-btn.ba-suggest:hover { border-color: var(--amber); color: var(--amber); background: var(--amber-light); }
+.ba-btn:disabled { opacity: 0.4; cursor: default; }
+
+/* Accepted state highlight on parent blocks */
+.cb.block-accepted   { border-color: var(--green-border); }
+.pv2.block-accepted  { border-color: var(--green-border); }
+.ch-card.block-accepted { border-color: var(--green-border); }
+.okr.block-accepted  { border-color: var(--green-border); }
+.persona-hd.block-accepted { border-color: var(--green-border); }
+.msg-house.block-accepted { border-color: var(--green-border); }
+
+/* Actions row below standalone blocks (table, step-flow, etc.) */
+.block-actions-row {
+  display: flex; gap: 6px; margin-bottom: 14px;
+}

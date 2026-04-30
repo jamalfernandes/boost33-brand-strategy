@@ -1,12 +1,16 @@
 'use client';
 
+import BlockActions from '@/components/BlockActions';
+
 interface SectionProps {
   sectionId: string;
   commentCount: number;
   onOpenComments: () => void;
+  acceptances: Record<string, boolean>;
+  onAccept: (blockId: string, accepted: boolean) => void;
 }
 
-export default function SuccessMetrics({ commentCount, onOpenComments }: SectionProps) {
+export default function SuccessMetrics({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
       <div className="page-eyebrow">Section 7 of 7</div>
@@ -22,14 +26,15 @@ export default function SuccessMetrics({ commentCount, onOpenComments }: Section
         Comments
       </button>
 
-      <div className="cb hero" style={{ marginBottom: 16 }}>
+      <div className={`cb hero${acceptances['suc-north-star'] ? ' block-accepted' : ''}`} style={{ marginBottom: 16 }}>
         <div className="cb-label">North-star metric</div>
         <div className="cb-body big">100 validated free account registrations per day — operational by September 2026.</div>
+        <BlockActions blockId="suc-north-star" sectionId={sectionId} accepted={acceptances['suc-north-star'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label">Objectives and key results by phase</div>
 
-      <div className="okr">
+      <div className={`okr${acceptances['suc-okr-may'] ? ' block-accepted' : ''}`}>
         <div className="okr-head">
           <span className="okr-period p1">May 2026</span>
           <div className="okr-obj">Install the system: content live, brand identity confirmed, owned channels rebuilt on a compliant foundation.</div>
@@ -40,9 +45,10 @@ export default function SuccessMetrics({ commentCount, onOpenComments }: Section
           <div className="kr"><span className="kr-n">KR 3</span><span>GDPR-compliant email opt-in mechanism built and live on website.</span></div>
           <div className="kr"><span className="kr-n">KR 4</span><span>Website brief delivered and priority fixes underway.</span></div>
         </div>
+        <BlockActions blockId="suc-okr-may" sectionId={sectionId} accepted={acceptances['suc-okr-may'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
-      <div className="okr">
+      <div className={`okr${acceptances['suc-okr-june'] ? ' block-accepted' : ''}`}>
         <div className="okr-head">
           <span className="okr-period p2">June – July 2026</span>
           <div className="okr-obj">Prove the model: first trial clients through the funnel, results captured, TikTok live and producing data.</div>
@@ -53,9 +59,10 @@ export default function SuccessMetrics({ commentCount, onOpenComments }: Section
           <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel live with initial 5-video test — format established, performance data collected.</span></div>
           <div className="kr"><span className="kr-n">KR 4</span><span>Referral system design complete and operationally ready to activate.</span></div>
         </div>
+        <BlockActions blockId="suc-okr-june" sectionId={sectionId} accepted={acceptances['suc-okr-june'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
-      <div className="okr" style={{ marginBottom: 16 }}>
+      <div className={`okr${acceptances['suc-okr-sept'] ? ' block-accepted' : ''}`} style={{ marginBottom: 16 }}>
         <div className="okr-head">
           <span className="okr-period p3">September 2026</span>
           <div className="okr-obj">Scale: paid ads live, tracking toward 100 daily registrations, all organic channels established and consistent.</div>
@@ -66,6 +73,7 @@ export default function SuccessMetrics({ commentCount, onOpenComments }: Section
           <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel consistent at established cadence with proven, repeatable format.</span></div>
           <div className="kr"><span className="kr-n">KR 4</span><span>Email list rebuilt, sending weekly, and generating inbound leads from the owned audience.</span></div>
         </div>
+        <BlockActions blockId="suc-okr-sept" sectionId={sectionId} accepted={acceptances['suc-okr-sept'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label">How to tell if you&apos;re on track</div>
@@ -85,13 +93,17 @@ export default function SuccessMetrics({ commentCount, onOpenComments }: Section
           <div className="ind-item"><strong>Referral-sourced leads</strong>The highest-quality signal: means results are real enough that clients actively tell other business owners. Aim to track from Month 2 onward.</div>
         </div>
       </div>
+      <div className="block-actions-row">
+        <BlockActions blockId="suc-indicators" sectionId={sectionId} accepted={acceptances['suc-indicators'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
+      </div>
 
-      <div className="cb" style={{ marginTop: 4 }}>
+      <div className={`cb${acceptances['suc-why'] ? ' block-accepted' : ''}`} style={{ marginTop: 4 }}>
         <div className="cb-label">Why September — and why the work before it matters</div>
         <div className="cb-body">
           <p>The May bank holiday period in France is a natural slow period for paid reach — which is why the organic build comes first. Phases 1 and 2 (May–August) are about creating the conditions for paid scale to work: a stable content system, a proven product, real client results as proof, and a warm audience on Instagram and TikTok that paid creative can retarget.</p>
           <p>Arriving at September with organic momentum already built means paid ads launch into a warm environment rather than a cold start. This is why the TikTok and Instagram work between now and September is not a placeholder — it&apos;s the foundation the September campaign depends on to perform.</p>
         </div>
+        <BlockActions blockId="suc-why" sectionId={sectionId} accepted={acceptances['suc-why'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
     </div>
   );

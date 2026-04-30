@@ -1,12 +1,16 @@
 'use client';
 
+import BlockActions from '@/components/BlockActions';
+
 interface SectionProps {
   sectionId: string;
   commentCount: number;
   onOpenComments: () => void;
+  acceptances: Record<string, boolean>;
+  onAccept: (blockId: string, accepted: boolean) => void;
 }
 
-export default function Message({ commentCount, onOpenComments }: SectionProps) {
+export default function Message({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
       <div className="page-eyebrow">Section 3 of 7</div>
@@ -45,22 +49,27 @@ export default function Message({ commentCount, onOpenComments }: SectionProps) 
           <div className="mh-base-body">Format: &ldquo;[Business type] in [city] got [measurable result] in [timeframe] during the free trial.&rdquo; Building testimonial capture into trial SOPs from day one ensures this content exists before the September paid ads campaign needs it.</div>
         </div>
       </div>
+      <div className="block-actions-row">
+        <BlockActions blockId="msg-house" sectionId={sectionId} accepted={acceptances['msg-house'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
+      </div>
 
-      <div className="cb" style={{ marginBottom: 14 }}>
+      <div className={`cb${acceptances['msg-primary'] ? ' block-accepted' : ''}`} style={{ marginBottom: 14 }}>
         <div className="cb-label">Primary audience — what to say and how to say it</div>
         <div className="cb-body">
           <p><strong>Name the pain before offering the solution.</strong> &ldquo;You&apos;re invisible to customers searching online right now. Competitors with a system are already winning the same pool of customers — without you even knowing you lost them.&rdquo; Urgency from reality, not pressure.</p>
           <p><strong>Remove risk before asking for anything.</strong> The business model is the message. Lead with what they don&apos;t have to do: no upfront payment, no long-term contract, no risk. Then explain what Boost33 does.</p>
           <p><strong>Language that works:</strong> Plain, direct, zero jargon. Outcomes only — more customers, more reviews, more revenue. No &ldquo;RevOps&rdquo;, &ldquo;funnels&rdquo;, &ldquo;growth stack&rdquo;, or &ldquo;automated workflows.&rdquo; These are business owners, not marketers.</p>
         </div>
+        <BlockActions blockId="msg-primary" sectionId={sectionId} accepted={acceptances['msg-primary'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
-      <div className="cb">
+      <div className={`cb${acceptances['msg-secondary'] ? ' block-accepted' : ''}`}>
         <div className="cb-label">Secondary audience — B2B and consulting clients</div>
         <div className="cb-body">
           <p><strong>Completely different register.</strong> This audience has pipeline but revenue operations held together manually. They respond to specificity, process language, and outcomes measured in pipeline velocity and conversion rate.</p>
           <p><strong>Language that works:</strong> RevOps, CRM, pipeline, conversion rate, scalable infrastructure. Long-form (LinkedIn articles, newsletter), frameworks, data. This is the opposite of the local SME voice — the two audiences should never see each other&apos;s messaging.</p>
         </div>
+        <BlockActions blockId="msg-secondary" sectionId={sectionId} accepted={acceptances['msg-secondary'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
     </div>
   );
