@@ -223,7 +223,7 @@ body {
 .strat-page { display: none; }
 .strat-page.active { display: block; }
 
-.page-inner { padding: 52px 56px 40px; max-width: 100%; position: relative; }
+.page-inner { padding: 52px 56px 40px; max-width: 1080px; margin: 0 auto; position: relative; }
 .page-eyebrow {
   font-family: 'Outfit', sans-serif;
   font-size: 10px; font-weight: 700;
