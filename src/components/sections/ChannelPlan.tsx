@@ -55,77 +55,81 @@ export default function ChannelPlan({ sectionId, commentCount, onOpenComments, a
 
       <div className="f-group">
         <div className="f-label">Awareness: reach cold audiences who don&apos;t know Boost33 yet</div>
-        <div className={`ch-card${acceptances['ch-tiktok'] ? ' block-accepted' : ''}`}>
-          <div className="ch-card-top">
-            <div className="ch-card-name">TikTok</div>
-            <span className="phase-pill p2">June / July</span>
-          </div>
-          <div className="ch-card-grid">
-            <div>
-              <div className="ch-col-lbl">Why this channel</div>
-              <div className="ch-col-body">Demand creation for the local SME audience. Reaches cold audiences who don&apos;t yet know Boost33. AI-assisted video production makes it scalable without a full video team. Content system and brand identity must be stable first. June/July start confirmed.</div>
+        <div className="two-col" style={{ marginBottom: 0 }}>
+          <div className={`ch-card${acceptances['ch-tiktok'] ? ' block-accepted' : ''}`}>
+            <div className="ch-card-top">
+              <div className="ch-card-name">TikTok</div>
+              <span className="phase-pill p2">June / July</span>
             </div>
-            <div>
-              <div className="ch-col-lbl">What gets published</div>
-              <div className="ch-col-body">AI-assisted short-form video: the prove-it-first model in 60 seconds, local business growth tips, results stories. Test 5 videos before committing to a cadence. Performance data informs the September paid creative.</div>
+            <div className="ch-card-grid">
+              <div>
+                <div className="ch-col-lbl">Why this channel</div>
+                <div className="ch-col-body">Demand creation for the local SME audience. Reaches cold audiences who don&apos;t yet know Boost33. AI-assisted video production makes it scalable without a full video team. Content system and brand identity must be stable first. June/July start confirmed.</div>
+              </div>
+              <div>
+                <div className="ch-col-lbl">What gets published</div>
+                <div className="ch-col-body">AI-assisted short-form video: the prove-it-first model in 60 seconds, local business growth tips, results stories. Test 5 videos before committing to a cadence. Performance data informs the September paid creative.</div>
+              </div>
             </div>
+            <BlockActions blockId="ch-tiktok" sectionId={sectionId} accepted={acceptances['ch-tiktok'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
           </div>
-          <BlockActions blockId="ch-tiktok" sectionId={sectionId} accepted={acceptances['ch-tiktok'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
-        </div>
-        <div className={`ch-card${acceptances['ch-paid'] ? ' block-accepted' : ''}`}>
-          <div className="ch-card-top">
-            <div className="ch-card-name">Paid Ads — Instagram + Google</div>
-            <span className="phase-pill p3">September</span>
-          </div>
-          <div className="ch-card-grid">
-            <div>
-              <div className="ch-col-lbl">Why this channel</div>
-              <div className="ch-col-body">Scale phase, reaching local SMEs at volume. The organic build and TikTok data collected in Phases 1–2 directly inform the creative and targeting at launch. Arriving with warm audiences already built means paid ads launch into signal, not noise.</div>
+          <div className={`ch-card${acceptances['ch-paid'] ? ' block-accepted' : ''}`}>
+            <div className="ch-card-top">
+              <div className="ch-card-name">Paid Ads — Instagram + Google</div>
+              <span className="phase-pill p3">September</span>
             </div>
-            <div>
-              <div className="ch-col-lbl">What gets published</div>
-              <div className="ch-col-body">Free growth audit as lead magnet. Results-led creative: real client stories from the trial cohort. &ldquo;See what your competitor is doing that you&apos;re not.&rdquo; Retargeting against Instagram and website audiences built throughout Phases 1–2.</div>
+            <div className="ch-card-grid">
+              <div>
+                <div className="ch-col-lbl">Why this channel</div>
+                <div className="ch-col-body">Scale phase, reaching local SMEs at volume. The organic build and TikTok data collected in Phases 1–2 directly inform the creative and targeting at launch. Arriving with warm audiences already built means paid ads launch into signal, not noise.</div>
+              </div>
+              <div>
+                <div className="ch-col-lbl">What gets published</div>
+                <div className="ch-col-body">Free growth audit as lead magnet. Results-led creative: real client stories from the trial cohort. &ldquo;See what your competitor is doing that you&apos;re not.&rdquo; Retargeting against Instagram and website audiences built throughout Phases 1–2.</div>
+              </div>
             </div>
+            <BlockActions blockId="ch-paid" sectionId={sectionId} accepted={acceptances['ch-paid'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
           </div>
-          <BlockActions blockId="ch-paid" sectionId={sectionId} accepted={acceptances['ch-paid'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
 
       <div className="f-group">
         <div className="f-label">Consideration: build trust with warm audiences</div>
-        <div className={`ch-card${acceptances['ch-instagram'] ? ' block-accepted' : ''}`}>
-          <div className="ch-card-top">
-            <div className="ch-card-name">Instagram</div>
-            <span className="phase-pill p1">Now</span>
-          </div>
-          <div className="ch-card-grid">
-            <div>
-              <div className="ch-col-lbl">Why this channel</div>
-              <div className="ch-col-body">Primary visual channel for local business owners. Existing presence. Phase 1 focus is installing strategy and SOPs before increasing volume. 3–4× per week once the SOP is live.</div>
+        <div className="two-col" style={{ marginBottom: 0 }}>
+          <div className={`ch-card${acceptances['ch-instagram'] ? ' block-accepted' : ''}`}>
+            <div className="ch-card-top">
+              <div className="ch-card-name">Instagram</div>
+              <span className="phase-pill p1">Now</span>
             </div>
-            <div>
-              <div className="ch-col-lbl">What gets published</div>
-              <div className="ch-col-body">Results posts, local business growth tips, founder and team content, behind-the-scenes of the trial process. Pillars 01 and 02 primarily.</div>
+            <div className="ch-card-grid">
+              <div>
+                <div className="ch-col-lbl">Why this channel</div>
+                <div className="ch-col-body">Primary visual channel for local business owners. Existing presence. Phase 1 focus is installing strategy and SOPs before increasing volume. 3–4× per week once the SOP is live.</div>
+              </div>
+              <div>
+                <div className="ch-col-lbl">What gets published</div>
+                <div className="ch-col-body">Results posts, local business growth tips, founder and team content, behind-the-scenes of the trial process. Pillars 01 and 02 primarily.</div>
+              </div>
             </div>
+            <BlockActions blockId="ch-instagram" sectionId={sectionId} accepted={acceptances['ch-instagram'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
           </div>
-          <BlockActions blockId="ch-instagram" sectionId={sectionId} accepted={acceptances['ch-instagram'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
-        </div>
-        <div className={`ch-card${acceptances['ch-linkedin'] ? ' block-accepted' : ''}`}>
-          <div className="ch-card-top">
-            <div className="ch-card-name">LinkedIn + LinkedIn Newsletter</div>
-            <span className="phase-pill p1">Now</span>
-          </div>
-          <div className="ch-card-grid">
-            <div>
-              <div className="ch-col-lbl">Why this channel</div>
-              <div className="ch-col-body">B2B and consulting segment only. The SaaS ICP is not on LinkedIn. Kept active for thought leadership aimed at the Elite/Premium consulting segment and for personal brand building. 3–5× per week. Newsletter publishes weekly for push notification reach.</div>
+          <div className={`ch-card${acceptances['ch-linkedin'] ? ' block-accepted' : ''}`}>
+            <div className="ch-card-top">
+              <div className="ch-card-name">LinkedIn + LinkedIn Newsletter</div>
+              <span className="phase-pill p1">Now</span>
             </div>
-            <div>
-              <div className="ch-col-lbl">What gets published</div>
-              <div className="ch-col-body">RevOps frameworks, founder insights, consultancy case studies. Pillars 03 and 04 adapted for B2B language and register. Completely different tone and vocabulary from the SME-facing content.</div>
+            <div className="ch-card-grid">
+              <div>
+                <div className="ch-col-lbl">Why this channel</div>
+                <div className="ch-col-body">B2B and consulting segment only. The SaaS ICP is not on LinkedIn. Kept active for thought leadership aimed at the Elite/Premium consulting segment and for personal brand building. 3–5× per week. Newsletter publishes weekly for push notification reach.</div>
+              </div>
+              <div>
+                <div className="ch-col-lbl">What gets published</div>
+                <div className="ch-col-body">RevOps frameworks, founder insights, consultancy case studies. Pillars 03 and 04 adapted for B2B language and register. Completely different tone and vocabulary from the SME-facing content.</div>
+              </div>
             </div>
+            <BlockActions blockId="ch-linkedin" sectionId={sectionId} accepted={acceptances['ch-linkedin'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
           </div>
-          <BlockActions blockId="ch-linkedin" sectionId={sectionId} accepted={acceptances['ch-linkedin'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
 

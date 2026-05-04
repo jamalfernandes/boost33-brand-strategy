@@ -34,46 +34,48 @@ export default function SuccessMetrics({ sectionId, commentCount, onOpenComments
 
       <div className="section-label">Objectives and key results by phase</div>
 
-      <div className={`okr${acceptances['suc-okr-may'] ? ' block-accepted' : ''}`}>
-        <div className="okr-head">
-          <span className="okr-period p1">May 2026</span>
-          <div className="okr-obj">Install the system: content live, brand identity confirmed, owned channels rebuilt on a compliant foundation.</div>
+      <div className="three-col" style={{ marginBottom: 16 }}>
+        <div className={`okr${acceptances['suc-okr-may'] ? ' block-accepted' : ''}`}>
+          <div className="okr-head">
+            <span className="okr-period p1">May 2026</span>
+            <div className="okr-obj">Install the system: content live, brand identity confirmed, owned channels rebuilt on a compliant foundation.</div>
+          </div>
+          <div className="okr-krs">
+            <div className="kr"><span className="kr-n">KR 1</span><span>Brand strategy finalised and signed off by the Boost33 team.</span></div>
+            <div className="kr"><span className="kr-n">KR 2</span><span>Instagram content SOP written and posting live at 3–4× per week, on-strategy, not ad hoc.</span></div>
+            <div className="kr"><span className="kr-n">KR 3</span><span>GDPR-compliant email opt-in mechanism built and live on website.</span></div>
+            <div className="kr"><span className="kr-n">KR 4</span><span>Website brief delivered and priority fixes underway.</span></div>
+          </div>
+          <BlockActions blockId="suc-okr-may" sectionId={sectionId} accepted={acceptances['suc-okr-may'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="okr-krs">
-          <div className="kr"><span className="kr-n">KR 1</span><span>Brand strategy finalised and signed off by the Boost33 team.</span></div>
-          <div className="kr"><span className="kr-n">KR 2</span><span>Instagram content SOP written and posting live at 3–4× per week, on-strategy, not ad hoc.</span></div>
-          <div className="kr"><span className="kr-n">KR 3</span><span>GDPR-compliant email opt-in mechanism built and live on website.</span></div>
-          <div className="kr"><span className="kr-n">KR 4</span><span>Website brief delivered and priority fixes underway.</span></div>
-        </div>
-        <BlockActions blockId="suc-okr-may" sectionId={sectionId} accepted={acceptances['suc-okr-may'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
-      </div>
 
-      <div className={`okr${acceptances['suc-okr-june'] ? ' block-accepted' : ''}`}>
-        <div className="okr-head">
-          <span className="okr-period p2">June – July 2026</span>
-          <div className="okr-obj">Prove the model: first trial clients through the funnel, results captured, TikTok live and producing data.</div>
+        <div className={`okr${acceptances['suc-okr-june'] ? ' block-accepted' : ''}`}>
+          <div className="okr-head">
+            <span className="okr-period p2">June – July 2026</span>
+            <div className="okr-obj">Prove the model: first trial clients through the funnel, results captured, TikTok live and producing data.</div>
+          </div>
+          <div className="okr-krs">
+            <div className="kr"><span className="kr-n">KR 1</span><span>First cohort of local businesses through the free trial funnel, minimum 3–5 clients onboarded.</span></div>
+            <div className="kr"><span className="kr-n">KR 2</span><span><strong>2–3 verified results stories</strong> formatted and ready to use as social proof and paid ad creative.</span></div>
+            <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel live with initial 5-video test. Format established, performance data collected.</span></div>
+            <div className="kr"><span className="kr-n">KR 4</span><span>Referral system design complete and operationally ready to activate.</span></div>
+          </div>
+          <BlockActions blockId="suc-okr-june" sectionId={sectionId} accepted={acceptances['suc-okr-june'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="okr-krs">
-          <div className="kr"><span className="kr-n">KR 1</span><span>First cohort of local businesses through the free trial funnel, minimum 3–5 clients onboarded.</span></div>
-          <div className="kr"><span className="kr-n">KR 2</span><span><strong>2–3 verified results stories</strong> formatted and ready to use as social proof and paid ad creative.</span></div>
-          <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel live with initial 5-video test. Format established, performance data collected.</span></div>
-          <div className="kr"><span className="kr-n">KR 4</span><span>Referral system design complete and operationally ready to activate.</span></div>
-        </div>
-        <BlockActions blockId="suc-okr-june" sectionId={sectionId} accepted={acceptances['suc-okr-june'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
-      </div>
 
-      <div className={`okr${acceptances['suc-okr-sept'] ? ' block-accepted' : ''}`} style={{ marginBottom: 16 }}>
-        <div className="okr-head">
-          <span className="okr-period p3">September 2026</span>
-          <div className="okr-obj">Scale: paid ads live, tracking toward 100 daily registrations, all organic channels established and consistent.</div>
+        <div className={`okr${acceptances['suc-okr-sept'] ? ' block-accepted' : ''}`}>
+          <div className="okr-head">
+            <span className="okr-period p3">September 2026</span>
+            <div className="okr-obj">Scale: paid ads live, tracking toward 100 daily registrations, all organic channels established and consistent.</div>
+          </div>
+          <div className="okr-krs">
+            <div className="kr"><span className="kr-n">KR 1</span><span>Paid Instagram + Google Ads campaigns live, targeting the confirmed ICP with results-led creative.</span></div>
+            <div className="kr"><span className="kr-n">KR 2</span><span><strong>100 validated free account registrations per day</strong>, actively scaling toward this number post-launch.</span></div>
+            <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel consistent at established cadence with proven, repeatable format.</span></div>
+            <div className="kr"><span className="kr-n">KR 4</span><span>Email list rebuilt, sending weekly, and generating inbound leads from the owned audience.</span></div>
+          </div>
+          <BlockActions blockId="suc-okr-sept" sectionId={sectionId} accepted={acceptances['suc-okr-sept'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-        <div className="okr-krs">
-          <div className="kr"><span className="kr-n">KR 1</span><span>Paid Instagram + Google Ads campaigns live, targeting the confirmed ICP with results-led creative.</span></div>
-          <div className="kr"><span className="kr-n">KR 2</span><span><strong>100 validated free account registrations per day</strong>, actively scaling toward this number post-launch.</span></div>
-          <div className="kr"><span className="kr-n">KR 3</span><span>TikTok channel consistent at established cadence with proven, repeatable format.</span></div>
-          <div className="kr"><span className="kr-n">KR 4</span><span>Email list rebuilt, sending weekly, and generating inbound leads from the owned audience.</span></div>
-        </div>
-        <BlockActions blockId="suc-okr-sept" sectionId={sectionId} accepted={acceptances['suc-okr-sept'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
       <div className="section-label">How to tell if you&apos;re on track</div>

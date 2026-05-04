@@ -32,7 +32,7 @@ export default function ContentStrategy({ sectionId, commentCount, onOpenComment
         <BlockActions blockId="content-rule" sectionId={sectionId} accepted={acceptances['content-rule'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
       </div>
 
-      <div className="three-col" style={{ marginBottom: 12 }}>
+      <div className="five-col" style={{ marginBottom: 14 }}>
         <div className={`pv2${acceptances['content-p1'] ? ' block-accepted' : ''}`}>
           <div className="pv2-num">Pillar 01</div>
           <div className="pv2-name">Grow Before You Pay</div>
@@ -69,9 +69,6 @@ export default function ContentStrategy({ sectionId, commentCount, onOpenComment
           <div className="pv2-eg">You&apos;re not in the hairdressing business. You&apos;re building a brand. The cut is just the door in.</div>
           <BlockActions blockId="content-p3" sectionId={sectionId} accepted={acceptances['content-p3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
-      </div>
-
-      <div className="two-col" style={{ marginBottom: 14 }}>
         <div className={`pv2${acceptances['content-p4'] ? ' block-accepted' : ''}`}>
           <div className="pv2-num">Pillar 04</div>
           <div className="pv2-name">Systems Over People</div>

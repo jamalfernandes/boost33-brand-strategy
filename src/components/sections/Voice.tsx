@@ -105,9 +105,11 @@ export default function Voice({ sectionId, commentCount, onOpenComments, accepta
       </div>
 
       <div className="section-label" style={{ marginTop: 4 }}>Founder voice — direct quotes from discovery</div>
-      <div className="quote-block">&ldquo;You&apos;re in the right place to make money. That&apos;s it.&rdquo;<div className="quote-attr">— Dezys</div></div>
-      <div className="quote-block">&ldquo;Bring results first. Show me the beef. And then I will consider you. Prove yourself — it&apos;s a universal rule.&rdquo;<div className="quote-attr">— Dezys, on Boost33&apos;s own operating philosophy</div></div>
-      <div className="quote-block" style={{ marginBottom: 0 }}>&ldquo;You don&apos;t have to pay. You just set up the business, and when you&apos;re ready, the deal is already there for you.&rdquo;<div className="quote-attr">— Dezys</div></div>
+      <div className="three-col" style={{ marginBottom: 0 }}>
+        <div className="quote-block" style={{ marginBottom: 0 }}>&ldquo;You&apos;re in the right place to make money. That&apos;s it.&rdquo;<div className="quote-attr">— Dezys</div></div>
+        <div className="quote-block" style={{ marginBottom: 0 }}>&ldquo;Bring results first. Show me the beef. And then I will consider you. Prove yourself — it&apos;s a universal rule.&rdquo;<div className="quote-attr">— Dezys, on Boost33&apos;s own operating philosophy</div></div>
+        <div className="quote-block" style={{ marginBottom: 0 }}>&ldquo;You don&apos;t have to pay. You just set up the business, and when you&apos;re ready, the deal is already there for you.&rdquo;<div className="quote-attr">— Dezys</div></div>
+      </div>
     </div>
   );
 }
