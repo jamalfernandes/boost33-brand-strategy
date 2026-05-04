@@ -45,7 +45,7 @@ export default function Customer({ sectionId, commentCount, onOpenComments, acce
       <div className="three-col" style={{ marginBottom: 14 }}>
         <div className={`cb${acceptances['cus-tools'] ? ' block-accepted' : ''}`}>
           <div className="cb-label">What they have</div>
-          <div className="cb-body">WhatsApp for customer messages. A Google Business Profile (often unclaimed). A basic website. Occasional Instagram posts with no strategy. Rarely: any CRM, email list, review system, or lead capture.</div>
+          <div className="cb-body">WhatsApp for customer messages. A Google Business Profile (often unclaimed). A basic website. Occasional Instagram posts with no strategy. Their payment terminal used as an analytics tool. Excel or their accounting software as a makeshift CRM. No all-in-one platform, no clear view of sales and growth. Overwhelmed by admin.</div>
           <BlockActions blockId="cus-tools" sectionId={sectionId} accepted={acceptances['cus-tools'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
         <div className={`cb${acceptances['cus-missing'] ? ' block-accepted' : ''}`}>
@@ -76,6 +76,11 @@ export default function Customer({ sectionId, commentCount, onOpenComments, acce
           <div className="step-n">Trigger 3</div>
           <div className="step-t">A bad agency experience</div>
           <div className="step-d">Paid for marketing, got activity, no customers. Still knows they can&apos;t keep doing nothing.</div>
+        </div>
+        <div className="step">
+          <div className="step-n">Trigger 4</div>
+          <div className="step-t">Leaving money on the table</div>
+          <div className="step-d">They realize existing customers aren&apos;t coming back as often as they should. New customers aren&apos;t being captured. They understand there&apos;s more revenue available, they just don&apos;t have a system to get it.</div>
         </div>
         <div className="step hl">
           <div className="step-n">Best lead</div>

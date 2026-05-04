@@ -45,8 +45,8 @@ export default function Message({ sectionId, commentCount, onOpenComments, accep
           </div>
         </div>
         <div className="mh-base">
-          <div className="mh-base-tag">Foundation — proof points (populated from Month 2 trial data)</div>
-          <div className="mh-base-body">Format: &ldquo;[Business type] in [city] got [measurable result] in [timeframe] during the free trial.&rdquo; Building testimonial capture into trial SOPs from day one ensures this content exists before the September paid ads campaign needs it.</div>
+          <div className="mh-base-tag">Foundation — proof points</div>
+          <div className="mh-base-body">Real results already on record: one client <strong>7x sales performance in 12 months</strong>. Another <strong>3x more leads in their pipeline</strong>. Format: &ldquo;[Business type] got [measurable result] in [timeframe].&rdquo; More stories are captured as the trial cohort scales. These are the numbers that go into paid ad creative in September.</div>
         </div>
       </div>
       <div className="block-actions-row">

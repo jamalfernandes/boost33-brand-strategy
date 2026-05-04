@@ -78,10 +78,10 @@ export default function Voice({ sectionId, commentCount, onOpenComments, accepta
             <span className="post-lbl">Do this</span>
           </div>
           <div className="post-body">
-            We just built a complete marketing system for a hairdresser in Lyon.<br /><br />
-            Before Boost33: 8 Google reviews.<br />
-            8 weeks later: 47 Google reviews. Full appointment book.<br /><br />
-            She didn&apos;t pay a cent until week 6, when she could already see it working.<br /><br />
+            One of our clients just hit 7x on sales performance.<br /><br />
+            12 months ago: no system, no pipeline visibility, no way to track where customers were coming from.<br /><br />
+            Today: the whole thing runs. Leads captured. Follow-up automated. Reviews building.<br /><br />
+            He didn&apos;t pay until he could already see it working.<br /><br />
             <span className="post-highlight">That&apos;s the whole point.</span>
           </div>
         </div>

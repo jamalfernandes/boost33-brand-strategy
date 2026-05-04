@@ -57,9 +57,10 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
         <table className="vs-tbl">
           <thead>
             <tr>
-              <th style={{ width: 150 }}>Factor</th>
+              <th style={{ width: 130 }}>Factor</th>
               <th className="b33">Boost33</th>
               <th>Agency / Freelancer</th>
+              <th>Odoo / ERP</th>
               <th>DIY Tools</th>
               <th>Do Nothing</th>
             </tr>
@@ -69,6 +70,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
               <td className="row-lbl">Cost to start</td>
               <td className="b33"><span className="v-yes">Free</span></td>
               <td>€500–2,000/mo</td>
+              <td>€300–800+/mo</td>
               <td>€50–200/mo</td>
               <td>€0</td>
             </tr>
@@ -76,6 +78,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
               <td className="row-lbl">Pay structure</td>
               <td className="b33"><span className="v-yes">Results first — always</span></td>
               <td><span className="v-no">Upfront, always</span></td>
+              <td><span className="v-no">Upfront + implementation</span></td>
               <td><span className="v-no">Upfront</span></td>
               <td>—</td>
             </tr>
@@ -83,6 +86,7 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
               <td className="row-lbl">System completeness</td>
               <td className="b33"><span className="v-yes">Complete — 79+ tools</span></td>
               <td><span className="v-mid">Partial</span></td>
+              <td><span className="v-mid">Broad but generic</span></td>
               <td><span className="v-no">Fragmented</span></td>
               <td><span className="v-no">None</span></td>
             </tr>
@@ -90,13 +94,23 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
               <td className="row-lbl">Setup required from client</td>
               <td className="b33"><span className="v-yes">None</span></td>
               <td>High</td>
+              <td><span className="v-no">Very high — weeks of config</span></td>
               <td>Very high</td>
               <td>None</td>
+            </tr>
+            <tr>
+              <td className="row-lbl">Built for local growth</td>
+              <td className="b33"><span className="v-yes">Yes — purpose-built</span></td>
+              <td><span className="v-mid">Depends</span></td>
+              <td><span className="v-no">No — generic ERP</span></td>
+              <td><span className="v-no">No</span></td>
+              <td>—</td>
             </tr>
             <tr>
               <td className="row-lbl">Ongoing management</td>
               <td className="b33"><span className="v-yes">Included</span></td>
               <td>Billed separately</td>
+              <td>Manual or paid support</td>
               <td>Manual work</td>
               <td>None</td>
             </tr>
@@ -104,12 +118,14 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
               <td className="row-lbl">Data ownership</td>
               <td className="b33"><span className="v-yes">Client owns it</span></td>
               <td>Agency holds it</td>
+              <td>Platform holds it</td>
               <td>Platform owns it</td>
               <td>None</td>
             </tr>
             <tr>
               <td className="row-lbl">Result before payment</td>
               <td className="b33"><span className="v-yes">Yes — guaranteed</span></td>
+              <td><span className="v-no">Never</span></td>
               <td><span className="v-no">Never</span></td>
               <td><span className="v-no">Never</span></td>
               <td>—</td>
@@ -145,6 +161,26 @@ export default function Positioning({ sectionId, commentCount, onOpenComments, a
             <p>As AI commoditises individual tools, client data becomes the real moat. Boost33 builds that asset from day one, owned by the client. Not by a platform that disappears when a subscription lapses.</p>
           </div>
           <BlockActions blockId="pos-diff-3" sectionId={sectionId} accepted={acceptances['pos-diff-3'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
+        </div>
+      </div>
+
+      <div className="section-label" style={{ marginTop: 14 }}>Pricing model</div>
+      <div className="two-col" style={{ marginBottom: 0 }}>
+        <div className={`cb${acceptances['pos-pricing-base'] ? ' block-accepted' : ''}`}>
+          <div className="cb-label">SaaS license — activates after the trial</div>
+          <div className="cb-body">
+            <p>The trial is free. Once the client sees results and chooses to activate, the paid license starts at <strong>€99 / month</strong>. No implementation fee, no long-term contract.</p>
+            <p>Payment is only triggered when the client decides to continue. The model itself is the pitch: they have already seen results before they ever see a price.</p>
+          </div>
+          <BlockActions blockId="pos-pricing-base" sectionId={sectionId} accepted={acceptances['pos-pricing-base'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
+        </div>
+        <div className={`cb${acceptances['pos-pricing-upsell'] ? ' block-accepted' : ''}`}>
+          <div className="cb-label">Data and cloud upsell — usage-based</div>
+          <div className="cb-body">
+            <p>Beyond the base license, clients can unlock more capacity: more lead opportunities, more data storage, more automation volume. Billed by usage, not by tier.</p>
+            <p>This creates a natural expansion revenue path tied directly to client growth. As their business grows, so does their usage. No renegotiating contracts.</p>
+          </div>
+          <BlockActions blockId="pos-pricing-upsell" sectionId={sectionId} accepted={acceptances['pos-pricing-upsell'] || false} onAccept={onAccept} onSuggest={onOpenComments} />
         </div>
       </div>
     </div>
