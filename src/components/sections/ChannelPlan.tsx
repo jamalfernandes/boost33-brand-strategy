@@ -13,7 +13,7 @@ interface SectionProps {
 export default function ChannelPlan({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 6 of 8</div>
+      <div className="page-eyebrow">Section 7 of 8</div>
       <h2 className="page-title">Channel plan</h2>
       <p className="page-sub">Where Boost33 shows up, which role each channel plays in the funnel, and how the build sequences from organic to paid scale.</p>
       <div className="page-divider" />

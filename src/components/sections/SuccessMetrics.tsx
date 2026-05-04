@@ -13,7 +13,7 @@ interface SectionProps {
 export default function SuccessMetrics({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 7 of 8</div>
+      <div className="page-eyebrow">Section 8 of 8</div>
       <h2 className="page-title">What success looks like</h2>
       <p className="page-sub">The north star target, three sets of key results by phase, and how to tell whether the strategy is on track before the lagging numbers come in.</p>
       <div className="page-divider" />

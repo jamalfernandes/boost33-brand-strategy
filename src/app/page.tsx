@@ -16,7 +16,7 @@ import SuccessMetrics from '@/components/sections/SuccessMetrics';
 import BrandIdentity from '@/components/sections/BrandIdentity';
 import { Comment, SectionId, SECTION_LABELS } from '@/types';
 
-const SECTION_IDS: SectionId[] = ['positioning', 'customer', 'message', 'voice', 'content', 'channels', 'success', 'brand'];
+const SECTION_IDS: SectionId[] = ['positioning', 'customer', 'message', 'voice', 'content', 'brand', 'channels', 'success'];
 const SECTION_NAMES = SECTION_IDS.map(id => SECTION_LABELS[id]);
 
 export default function Home() {
@@ -131,13 +131,13 @@ export default function Home() {
               <ContentStrategy {...sectionProps(4)} />
             </div>
             <div style={{ display: currentSection === 5 ? 'block' : 'none' }}>
-              <ChannelPlan {...sectionProps(5)} />
+              <BrandIdentity {...sectionProps(5)} />
             </div>
             <div style={{ display: currentSection === 6 ? 'block' : 'none' }}>
-              <SuccessMetrics {...sectionProps(6)} />
+              <ChannelPlan {...sectionProps(6)} />
             </div>
             <div style={{ display: currentSection === 7 ? 'block' : 'none' }}>
-              <BrandIdentity {...sectionProps(7)} />
+              <SuccessMetrics {...sectionProps(7)} />
             </div>
           </div>
 

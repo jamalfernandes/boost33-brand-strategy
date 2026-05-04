@@ -13,7 +13,7 @@ interface SectionProps {
 export default function BrandIdentity({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 8 of 8</div>
+      <div className="page-eyebrow">Section 6 of 8</div>
       <h2 className="page-title">Brand identity</h2>
       <p className="page-sub">The visual system behind Boost33 — logo usage, colour palette, typography, and the rules that keep everything consistent across every touchpoint.</p>
       <div className="page-divider" />

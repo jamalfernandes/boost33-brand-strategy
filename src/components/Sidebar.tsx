@@ -8,8 +8,8 @@ interface SidebarProps {
 
 const GROUPS = [
   { label: 'Foundation', indices: [0, 1, 2] },
-  { label: 'Brand', indices: [3, 4, 7] },
-  { label: 'Plan', indices: [5, 6] },
+  { label: 'Brand', indices: [3, 4, 5] },
+  { label: 'Plan', indices: [6, 7] },
 ];
 
 export default function Sidebar({ sections, current, onSelect }: SidebarProps) {
