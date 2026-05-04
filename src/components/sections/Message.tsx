@@ -13,7 +13,7 @@ interface SectionProps {
 export default function Message({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 3 of 7</div>
+      <div className="page-eyebrow">Section 3 of 8</div>
       <h2 className="page-title">Your message</h2>
       <p className="page-sub">The message hierarchy behind every piece of Boost33 communication, from the core brand statement down to audience-specific language and proof.</p>
       <div className="page-divider" />

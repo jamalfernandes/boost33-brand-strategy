@@ -13,7 +13,7 @@ interface SectionProps {
 export default function ContentStrategy({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 5 of 7</div>
+      <div className="page-eyebrow">Section 5 of 8</div>
       <h2 className="page-title">Content strategy</h2>
       <p className="page-sub">Five pillars that every piece of Boost33 content maps to: the audience need each one addresses, the formats that work, and an example angle.</p>
       <div className="page-divider" />

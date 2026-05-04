@@ -13,7 +13,7 @@ interface SectionProps {
 export default function Positioning({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 1 of 7</div>
+      <div className="page-eyebrow">Section 1 of 8</div>
       <h2 className="page-title">Your positioning</h2>
       <p className="page-sub">The market category Boost33 owns, the positioning statement, and how it stacks up against every alternative a local business owner has already tried.</p>
       <div className="page-divider" />

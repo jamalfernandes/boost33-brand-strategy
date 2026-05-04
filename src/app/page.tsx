@@ -13,9 +13,10 @@ import Voice from '@/components/sections/Voice';
 import ContentStrategy from '@/components/sections/ContentStrategy';
 import ChannelPlan from '@/components/sections/ChannelPlan';
 import SuccessMetrics from '@/components/sections/SuccessMetrics';
+import BrandIdentity from '@/components/sections/BrandIdentity';
 import { Comment, SectionId, SECTION_LABELS } from '@/types';
 
-const SECTION_IDS: SectionId[] = ['positioning', 'customer', 'message', 'voice', 'content', 'channels', 'success'];
+const SECTION_IDS: SectionId[] = ['positioning', 'customer', 'message', 'voice', 'content', 'channels', 'success', 'brand'];
 const SECTION_NAMES = SECTION_IDS.map(id => SECTION_LABELS[id]);
 
 export default function Home() {
@@ -134,6 +135,9 @@ export default function Home() {
             </div>
             <div style={{ display: currentSection === 6 ? 'block' : 'none' }}>
               <SuccessMetrics {...sectionProps(6)} />
+            </div>
+            <div style={{ display: currentSection === 7 ? 'block' : 'none' }}>
+              <BrandIdentity {...sectionProps(7)} />
             </div>
           </div>
 

@@ -13,7 +13,7 @@ interface SectionProps {
 export default function Voice({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 4 of 7</div>
+      <div className="page-eyebrow">Section 4 of 8</div>
       <h2 className="page-title">How you sound</h2>
       <p className="page-sub">The personality, tone, and language rules behind every piece of Boost33 content, with examples of what it looks like in practice.</p>
       <div className="page-divider" />

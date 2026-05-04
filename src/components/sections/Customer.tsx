@@ -13,7 +13,7 @@ interface SectionProps {
 export default function Customer({ sectionId, commentCount, onOpenComments, acceptances, onAccept }: SectionProps) {
   return (
     <div className="page-inner">
-      <div className="page-eyebrow">Section 2 of 7</div>
+      <div className="page-eyebrow">Section 2 of 8</div>
       <h2 className="page-title">Your customer</h2>
       <p className="page-sub">Who the primary customer is, where they are today, what finally makes them act, and who Boost33 is not built for.</p>
       <div className="page-divider" />
