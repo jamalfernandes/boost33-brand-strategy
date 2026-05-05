@@ -152,7 +152,7 @@ export default function OverviewView() {
           </svg>
           This document is private and prepared exclusively for Boost33 by Onepct. Do not share or distribute.
         </div>
-        <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: 11, color: '#86868b', opacity: 0.45 }}>Onepct · May 2026 · V0.3</span>
+        <span style={{ fontFamily: "'Outfit', sans-serif", fontSize: 11, color: '#86868b', opacity: 0.45 }}>Onepct · May 2026 · V0.4</span>
       </div>
     </div>
   );

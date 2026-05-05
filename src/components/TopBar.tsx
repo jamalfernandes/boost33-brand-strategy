@@ -31,7 +31,7 @@ export default function TopBar({ activeView, onViewChange }: TopBarProps) {
 
       <div className="topbar-right">
         <span className="tb-date">May 2026</span>
-        <span className="tb-badge">Draft · V0.3</span>
+        <span className="tb-badge">Draft · V0.4</span>
       </div>
     </header>
   );
