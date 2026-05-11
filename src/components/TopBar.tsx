@@ -3,9 +3,10 @@
 interface TopBarProps {
   activeView: 'overview' | 'strategy';
   onViewChange: (view: 'overview' | 'strategy') => void;
+  userEmail: string;
 }
 
-export default function TopBar({ activeView, onViewChange }: TopBarProps) {
+export default function TopBar({ activeView, onViewChange, userEmail }: TopBarProps) {
   return (
     <header className="topbar">
       <div className="topbar-brand">
@@ -32,6 +33,10 @@ export default function TopBar({ activeView, onViewChange }: TopBarProps) {
       <div className="topbar-right">
         <span className="tb-date">May 2026</span>
         <span className="tb-badge">Draft · V0.4</span>
+        <span className="tb-user" title={userEmail}>{userEmail}</span>
+        <form action="/auth/signout" method="post">
+          <button type="submit" className="tb-signout">Sign out</button>
+        </form>
       </div>
     </header>
   );
