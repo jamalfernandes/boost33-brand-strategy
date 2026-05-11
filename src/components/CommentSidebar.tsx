@@ -13,7 +13,6 @@ interface CommentSidebarProps {
 export default function CommentSidebar({ sectionId, sectionLabel, onClose, isOpen }: CommentSidebarProps) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(false);
-  const [author, setAuthor] = useState('');
   const [role, setRole] = useState<'onepct' | 'boost33'>('onepct');
   const [text, setText] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -49,16 +48,15 @@ export default function CommentSidebar({ sectionId, sectionLabel, onClose, isOpe
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!author.trim() || !text.trim() || !sectionId) return;
+    if (!text.trim() || !sectionId) return;
     setSubmitting(true);
     try {
       const res = await fetch('/api/comments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ section_id: sectionId, author, role, text }),
+        body: JSON.stringify({ section_id: sectionId, role, text }),
       });
       if (res.ok) {
-        setAuthor('');
         setText('');
         setRole('onepct');
         await fetchComments();
@@ -109,13 +107,6 @@ export default function CommentSidebar({ sectionId, sectionLabel, onClose, isOpe
 
       <form className="comment-form" onSubmit={handleSubmit}>
         <div className="comment-form-row">
-          <input
-            className="comment-input"
-            placeholder="Your name"
-            value={author}
-            onChange={e => setAuthor(e.target.value)}
-            required
-          />
           <select
             className="comment-select"
             value={role}
@@ -135,7 +126,7 @@ export default function CommentSidebar({ sectionId, sectionLabel, onClose, isOpe
         <button
           type="submit"
           className="comment-submit"
-          disabled={submitting || !author.trim() || !text.trim()}
+          disabled={submitting || !text.trim()}
         >
           {submitting ? 'Posting…' : 'Post comment'}
         </button>
